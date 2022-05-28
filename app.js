@@ -9,10 +9,11 @@ const game = {
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
     },
     getGuess: function(guess) {
+      do {
       let guess = prompt(`Enter a guess between ${this.smallestNum}
         and ${this.biggestNum}.`,'')
       guess = parseInt(guess)
-    }
+    } while (guess !== this.secretNum)
   }
-
+}
 
